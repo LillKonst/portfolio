@@ -12,11 +12,13 @@ html {
 h1, h2, h3, p {
     font-family: "Hubballi";
     color: #ffff;
+    font-weight: 400;
 }
 
 main {
-    background-color: #1F1638;
     margin: 0px 15px; 
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -207,4 +209,135 @@ footer button {
 
 footer button:hover {
     font-weight: 600;
+}
+
+@media (min-width: 1000px) {
+
+    header {
+        flex-direction: row;
+        margin: 10px 20px;
+    }
+    .menu {
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        height: fit-content;
+        width: fit-content;
+        position: static;
+        margin: 0px 50px 0px 0px;
+    }
+
+    .menu a {
+        font-size: 1.1em;
+    }
+
+    .vertical-line {
+        height: 20px; /* Adjust height as needed */
+        border-left: 1px solid #ccc; /* Color and style of the vertical line */
+        margin: 20px 10px; /* Adjust margin as needed */
+    }
+
+
+    .about-me {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 90%;
+        align-self: center;
+        background-color: #1F1638;
+    }
+    .img__container {
+        width: 40%; 
+    }
+
+    .text-box {
+        text-align: center;
+    }
+
+    .text-box h2 {
+        font-size: 2em;
+        margin: 10px;
+        padding: 0; 
+    }
+
+    .text-box h3 {
+        font-size: 1.5em;
+        margin: 0px 0px 20px 0px;
+        padding: 0; 
+    }
+
+    .text-box p {
+        padding: 10px; 
+        margin: 0px 40px; 
+    }
+
+    .text-box .btn {
+        margin: 30px; 
+    }
+
+    .project__container {
+        width: 90%; 
+        align-self: center;
+        margin-top: 20px; 
+    }
+
+    .project__container h2 {
+        margin-bottom: 0px;
+        padding: 0;
+    }
+
+    .card {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .card-2 {
+        flex-direction: row-reverse;
+    }
+
+    .card-head {
+        width: 50%;
+        height: auto;
+    }
+
+    .mesh-background {
+        display: none;
+
+    }
+
+    .desktop {
+        display: flex;
+    }
+
+    .card-head img {
+        width: 100%; 
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card-text {
+        display: flex;
+        flex-direction: column;
+        padding: 20px; 
+        height: fit-content;
+        width: 50%;
+    }
+
+    .card-text h3 {
+        font-size: 1.5em;
+        margin: 10px; 
+    }
+
+    .card-text p {
+        font-size: 1em;
+        margin: 10px; 
+        padding: 0px;
+    }
+
+    .btn__container {
+        padding: 0; 
+    }
+
+    .card-text .btn{
+        margin: 10px 30px;
+    }
 }
