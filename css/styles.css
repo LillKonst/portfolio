@@ -150,38 +150,30 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #C1BAB3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
 }
 
 h2 {
     font-size: 2em;
     margin: 10px 10px 0px 10px; 
 }
-/*
-.desktop {
-    display: none;
-}*/
 
 .card {
     display: flex;
     flex-direction: column;
-    background-color: #C1BAB3;
-    width: 100%; 
+    background-color: #E6DFD7;
+    width: 90%; 
     margin: 20px; 
+    border-radius: 10px;
 }
 
-.card-head {
-    position: relative;
-    width: 100%; 
-    height: 200px; 
-    margin: 0; 
-}
-
-.card-head img {
-    position: absolute;
-    top: 0;
-    left: 0; 
-    width: 100%; 
-    height: 300px; 
+.card img {
+    align-self: center;
+    width: 100%;
+    height: max-content;
+    border-radius: 10px;
     object-fit: cover;
 }
 
@@ -201,6 +193,12 @@ h2 {
     margin: 10px;
 }
 
+.card-text h4 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
 .card-text p {
     padding: 10px; 
     margin: 10px 10px 20px 10px;
@@ -210,7 +208,7 @@ h2 {
     display: flex;
     justify-content: space-evenly;
     padding: 20px; 
-    margin-top: 20px; 
+    margin-top: 0px; 
 }
 
 .btn {
@@ -225,6 +223,80 @@ h2 {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+.contact {
+    display: flex;
+    align-self: center;
+    width: 90%; 
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+    align-self: center;
+    background-color: #C1BAB3;
+    border-radius: 20px;
+    padding: 20px 0px; 
+}
+
+legend, label, input {
+    font-family: "Hubballi";
+}
+
+legend {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+form label { 
+    padding:5px;}
+
+legend:after {
+    content:"";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 60px;
+    border-radius: 2px;
+    background-color: #D9CAB3;
+}
+
+fieldset {
+    border: none;
+}
+
+.form__input {
+    width: 90%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0);
+    font-size: 1.1rem;
+    margin: 5px 0px 22px 0px; 
+    background-color: #FCF7F8;
+    border-radius: 10px;
+
+}
+
+.form__input:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+.form__input:focus {
+    background-color: #fff;
+    border: 2px solid rgba(191, 209, 229, 0.5);
+}
+
+.message-box {
+    min-height: 150px;
+}
+
+
 
 footer {
     display: flex;
@@ -258,6 +330,30 @@ footer button:hover {
 }
 
 @media (min-width: 1000px) {
+
+    .welcome {
+        align-self: center;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        margin: 20px; 
+        padding: 40px;
+        text-align: center;
+        background-color: #C1BAB3;
+        height: fit-content;
+        border-radius: 100px;
+    }
+
+    .image {
+        width: 40%;
+        height: max-content;
+        border-radius: 20px;
+    }
+
+
+    .mobile {
+        display: none;
+    }
 
     header {
         flex-direction: row;
@@ -317,6 +413,7 @@ footer button:hover {
 
 
     .about-me {
+        margin-top: 20px;
         display: flex;
         flex-direction: row-reverse;
         width: 90%;
@@ -380,6 +477,8 @@ footer button:hover {
         align-self: center;
         margin: 20px;
         padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        height: 200px; 
     }
     h4 {
         padding: 10px; 
@@ -408,25 +507,16 @@ footer button:hover {
 
     .card {
         flex-direction: row;
-        width: 100%;
+        width: 90%;
+        padding: 20px;
     }
 
     .card-2 {
         flex-direction: row-reverse;
     }
 
-    .card-head {
+    .card img {
         width: 50%;
-        height: auto;
-    }
-
-    .mesh-background {
-        display: none;
-
-    }
-
-    .desktop {
-        display: flex;
     }
 
     .card-head img {
@@ -461,6 +551,14 @@ footer button:hover {
     a .btn{
         margin: 10px 30px;
     }
+
+    .trio-box {
+        width: 90%;
+        align-self: center;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
 }
 
 @media (min-width: 1200px) {
