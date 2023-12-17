@@ -78,27 +78,29 @@ header {
 .menu {
     display: none;
     position: fixed;
-    top: 0px; 
-    left: 0; 
-    background-color: #C1BAB3;
+    top: 22px; 
+    right: 20px; 
+    border-radius: 10px 30px 10px 10px;
+    padding-top: 50px;
+    background-color: rgba(193, 186, 179);
     z-index: 998;
 }
 
 .menu.active {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 100%;
+    justify-content: center;
+    width: 50%;
     height: 250px; 
 }
 
 .menu a {
-    align-self: center;
+    text-align: left;
     font-family: "Hubballi";
     color: #000000;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.8em;
     padding: 20px; 
 }
 
@@ -108,15 +110,34 @@ main {
     flex-direction: column;
 }
 
-.img__container {
-    position: relative;
-    height: 600px;
-    margin: 0px;
+.welcome {
+    align-self: center;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 20px; 
+    padding: 40px;
+    text-align: center;
+    background-color: #C1BAB3;
+    height: fit-content;
+    border-radius: 100px;
 }
+
+.welcome h2 {
+    font-size: 3em;
+}
+
+.welcome p {
+    font-size: 2em;
+}
+
 .main-img {
-    width: 100%;
-    height: 100%;
+    height: 600px;
+    margin-top: 20px;
+    width: 95%;
     object-fit: cover;
+    border-radius: 20px;
+    align-self: center;
 }
 
 .mesh-background {
@@ -169,10 +190,11 @@ h2 {
 
 .card img {
     align-self: center;
-    width: 100%;
+    width: 95%;
     height: max-content;
     border-radius: 10px;
     object-fit: cover;
+    margin: 10px; 
 }
 
 .card-head .mesh-background {
@@ -229,9 +251,24 @@ h2 {
     flex-direction: column;
     align-self: center;
     margin: 100px 0px;
-    width: 100%; 
+    width: 90%; 
 }
 
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 90%;
+    height: fit-content;
+    background-color: #C1BAB3;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.text-style{
+    font-size: 0.8em;
+    color: #A4303F;
+}
 
 
 
@@ -249,7 +286,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; 
+    width: 90%; 
     align-self: center;
     background-color: #C1BAB3;
     border-radius: 20px;
@@ -334,45 +371,14 @@ footer button:hover {
 }
 
 @media (max-width: 400px) {
-    .img__container {
-        height: 250px; 
-        width: 100%;
-    }
 
     .main-img {
-        height: 100%; 
+        height: 250px; 
+        width: 100%;
     }
 }
 
 @media (min-width: 1000px) {
-
-    .welcome {
-        align-self: center;
-        width: fit-content;
-        display: flex;
-        flex-direction: column;
-        margin: 50px 20px; 
-        padding: 40px;
-        text-align: center;
-        background-color: #C1BAB3;
-        height: fit-content;
-        border-radius: 100px;
-    }
-
-    .welcome h2 {
-        font-size: 3em;
-    }
-
-    .welcome p {
-        font-size: 2em;
-    }
-
-    .image {
-        width: 40%;
-        height: max-content;
-        border-radius: 20px;
-    }
-
 
     .mobile {
         display: none;
@@ -382,6 +388,8 @@ footer button:hover {
         flex-direction: row;
         position: relative;
         height: 50px; 
+        width: 100%; 
+        margin: 0;
     }
 
     .fixed-header {
@@ -389,6 +397,7 @@ footer button:hover {
         top: 0;
         width: 100%;
         z-index: 999;
+        margin: 0;
       }
 
     .hamburger-icon {
@@ -398,7 +407,7 @@ footer button:hover {
     .hamburger-menu {
         position: fixed;
         top: 17px;
-        right: 17px; 
+        right: 50px; 
     }
 
     .menu, .menu.active {
@@ -409,6 +418,7 @@ footer button:hover {
         width: fit-content;
         position: static;
         overflow: hidden;
+        padding-top: 0px; 
 
     }
 
@@ -439,25 +449,18 @@ footer button:hover {
         display: flex;
         flex-direction: row-reverse;
         width: 90%;
-        height: fit-content;
         align-self: center;
-        background-color: #C1BAB3;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
 
     .text-box h2 {
         text-align: left;
     }
-    .img__container {
-        width: 400px;
-        height: 450px; 
-        margin: 20px;
-    }
 
     .main-img {
         border-radius: 20px;
-        height: 100%; 
+        width: 400px;
+        height: 450px; 
+        margin: 20px;
     }
 
     .text-box {
@@ -469,11 +472,6 @@ footer button:hover {
         font-size: 2em;
         margin: 10px;
         padding: 0; 
-    }
-
-    .text-style{
-        font-size: 0.8em;
-        color: #A4303F;
     }
 
     .text-box h3 {
