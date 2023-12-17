@@ -1,7 +1,12 @@
 html {
     margin: 0; 
     padding: 0; 
-    background-color: #17102B;
+    background-color: #E6DFD7;
+}
+
+body {
+    margin: 0; 
+    padding: 0; 
 }
 
 @font-face {
@@ -9,64 +14,74 @@ html {
     src: url("/fonts/Hubballi-Regular.ttf")
 }
 
-h1, h2, h3, p {
+h1, h2, h3, h4, p {
     font-family: "Hubballi";
-    color: #ffff;
+    color: #000000;
     font-weight: 400;
-}
-
-main {
-    margin: 0px 15px; 
-    display: flex;
-    flex-direction: column;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     position: relative;
-    background-color: #17102B;
+    background-color: #C1BAB3;
+    margin: 0px;
+    padding: 10px;
 }
 
 .logo {
     font-family: "Hubballi";
     text-decoration: none;
-    color: #ffff;
+    color: #000000;
     font-size: 1.8em;
     padding: 15px; 
+    z-index: 999;
 }
 
-/*
-
 .hamburger-menu {
-    background-color: #1F1638;
+    position: relative;
+}
+
+.hamburger-menu.sticky {
+    position: fixed;
+    top: 12px;
+    right: 12px; 
+    z-index: 997;
+    padding: 5px; 
+}
+
+
+.hamburger-icon {
+    background-color: #E6DFD7 ;
     border: none; 
     border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px;
-}
-
-.hamburger-menu p {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     font-family: "Hubballi";
-    font-size: 1.8em;
-    padding: 10px 5px;
-    margin: 0;
+    font-size: 1.5em;
+    padding: 10px;
+    z-index: 999;
+    position: fixed;
+    top: 12px;
+    right: 12px; 
 }
 
-.hamburger-menu img {
+.hamburger-icon img {
     width: 20px; 
-    padding: 10px 5px;
+    padding: 10px 5px 10px 5px;
 }
 
 
 .menu {
     display: none;
-    position: absolute;
-    top: 60px; 
+    position: fixed;
+    top: 0px; 
     left: 0; 
-    background-color: #1F1638;
+    background-color: #C1BAB3;
+    z-index: 998;
 }
 
 .menu.active {
@@ -76,36 +91,31 @@ header {
     align-items: center;
     width: 100%;
     height: 250px; 
-    z-index: 999;
-}
-
-*/
-
-.menu {
-    position: absolute;
-    top: 20px;
-    right: 20px; 
 }
 
 .menu a {
     align-self: center;
     font-family: "Hubballi";
-    color: #ffff;
+    color: #000000;
     text-decoration: none;
     font-size: 1.2em;
     padding: 20px; 
 }
 
-
+main {
+    margin: 20px 0px; 
+    display: flex;
+    flex-direction: column;
+}
 
 .img__container {
     position: relative;
-    height: 400px;
+    height: 600px;
     margin: 0px;
 }
 .main-img {
     width: 100%;
-    height: 400px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -118,29 +128,33 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 h1 {
     text-align: center;
     font-size: 2em; 
+    color: #fff;
 }
 
 .text-box {
     margin: 10px; 
     padding: 10px; 
+    text-align: center;
 }
 
 .text-box p {
     font-size: 1.2em;
-    text-align: center;
 }
 
 .project__container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #17102B;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 10px 10px 0px 10px; 
 }
 /*
 .desktop {
@@ -150,7 +164,7 @@ h1 {
 .card {
     display: flex;
     flex-direction: column;
-    background-color: #1F1638;
+    background-color: #C1BAB3;
     width: 100%; 
     margin: 20px; 
 }
@@ -196,17 +210,20 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     padding: 20px; 
+    margin-top: 20px; 
 }
 
 .btn {
-    color:#ffff;
+    color:#fff;
     font-family: "Hubballi";
     font-size: 1.2em;
-    background-color: #1F1642;
+    background-color: #A4303F;
     border: none;  
     width: fit-content;
     padding: 10px;
     text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 footer {
@@ -219,7 +236,7 @@ footer button {
     color:#ffff;
     font-family: "Hubballi";
     font-size: 1.2em;
-    background-color: #1F1642;
+    background-color: #C1BAB3;
     border: none;  
     width: fit-content;
     padding: 10px;
@@ -229,46 +246,100 @@ footer button:hover {
     font-weight: 600;
 }
 
+@media (max-width: 400px) {
+    .img__container {
+        height: 250px; 
+        width: 100%;
+    }
+
+    .main-img {
+        height: 100%; 
+    }
+}
+
 @media (min-width: 1000px) {
 
     header {
         flex-direction: row;
-        margin: 10px 20px;
+        position: relative;
+        height: 50px; 
     }
-    .menu {
+
+    .fixed-header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+      }
+
+    .hamburger-icon {
+        display: none;
+    }
+
+    .hamburger-menu {
+        position: fixed;
+        top: 17px;
+        right: 17px; 
+    }
+
+    .menu, .menu.active {
         display: flex;
         flex-direction: row;
         background-color: transparent;
         height: fit-content;
         width: fit-content;
         position: static;
-        margin: 0px 50px 0px 0px;
+        overflow: hidden;
+
     }
 
     .menu a {
-        font-size: 1.1em;
+        font-size: 1.5em;
+        position: relative;
     }
 
-    .vertical-line {
-        height: 20px; /* Adjust height as needed */
-        border-left: 1px solid #ccc; /* Color and style of the vertical line */
-        margin: 20px 10px; /* Adjust margin as needed */
-    }
+    .menu a::before {
+        content: '';
+        position: absolute;
+        bottom: 20px;
+        left: 25%; 
+        width: 50%;
+        height: 2px;
+        background-color: #A4303F;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+      
+      .menu a:hover::before {
+        transform: scaleX(1);
+      }
+
 
 
     .about-me {
         display: flex;
         flex-direction: row-reverse;
         width: 90%;
+        height: fit-content;
         align-self: center;
-        background-color: #1F1638;
+        background-color: #C1BAB3;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
     .img__container {
-        width: 40%; 
+        width: 400px;
+        height: 450px; 
+        margin: 20px;
+    }
+
+    .main-img {
+        border-radius: 20px;
+        height: 100%; 
     }
 
     .text-box {
-        text-align: center;
+        text-align: left;
+        width: 60%;
     }
 
     .text-box h2 {
@@ -277,20 +348,52 @@ footer button:hover {
         padding: 0; 
     }
 
+    .text-style{
+        font-size: 0.8em;
+        color: #A4303F;
+    }
+
     .text-box h3 {
-        font-size: 1.5em;
-        margin: 0px 0px 20px 0px;
+        font-size: 1.3em;
+        margin: 10px 10px 40px 10px;
         padding: 0; 
     }
 
     .text-box p {
-        padding: 10px; 
-        margin: 0px 40px; 
+        margin: 30px 10px; 
+        font-size: 1.3em;
+    }
+
+    .about-me .btn__container {
+        margin: 20px; 
+        padding: 10px;
     }
 
     .text-box .btn {
-        margin: 30px; 
+        margin: 10px;
     }
+
+
+    .skill-box {
+        background-color: #C1BAB3;
+        border-radius: 20px; 
+        align-self: center;
+        margin: 20px;
+        padding: 20px;
+    }
+    h4 {
+        padding: 10px; 
+        font-size: 1.2em;
+        margin: 10px; 
+        padding: 0; 
+    }
+
+    .skill-box li {
+        font-family: "Hubballi";
+        font-size: 1.5em;
+    }
+
+
 
     .project__container {
         width: 90%; 
@@ -357,5 +460,29 @@ footer button:hover {
 
     a .btn{
         margin: 10px 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .text-box h2 {
+        font-size: 2.5em;
+    }
+
+    .text-box h3 {
+        font-size: 1.5em;
+    }
+
+    h4 {
+        font-size: 1.5em;
+    }
+
+    .text-box p {
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 1500px) {
+    .about-me {
+        width: 1200px; 
     }
 }
