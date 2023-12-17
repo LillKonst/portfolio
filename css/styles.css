@@ -228,6 +228,7 @@ h2 {
     display: flex;
     align-self: center;
     width: 90%; 
+    margin-top: 20px; 
 }
 
 .form-box {
