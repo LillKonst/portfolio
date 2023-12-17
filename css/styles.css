@@ -322,6 +322,8 @@ legend:after {
 
 fieldset {
     border: none;
+    display: flex;
+    flex-direction: column;
 }
 
 .form__input {
@@ -349,26 +351,95 @@ fieldset {
     min-height: 150px;
 }
 
+.error-message {
+    color: #CC444B;
+    font-size: 14px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    display: none;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.modal-content {
+    background-color:#C1BAB3;
+    margin: 15% auto;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    position: relative;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.close {
+    color: #000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-footer button {
-    color:#ffff;
-    font-family: "Hubballi";
-    font-size: 1.2em;
+    justify-content: center;
     background-color: #C1BAB3;
-    border: none;  
-    width: fit-content;
-    padding: 10px;
+    height: 100px; 
 }
 
-footer button:hover {
-    font-weight: 600;
+footer p {
+   font-size: 1em;
+   padding: 20px;
+   width: fit-content;
+}
+
+@media (max-width: 350px) {
+
+    .toosmall {
+        display: none;
+    }
+
+    .welcome {
+        margin: 5px;
+        padding: 0;
+    }
+
+    .btn__container {
+        padding: 0; 
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn {
+        font-size: 1em;
+        margin: 10px;
+    }
+
+    .form__input {
+        width: 100px; 
+    }
 }
 
 @media (max-width: 500px) {
@@ -395,6 +466,12 @@ footer button:hover {
 
     .btn {
         font-size: 1.2em;
+    }
+}
+
+@media (min-width: 600px) {
+    .form__input {
+        width: 400px; 
     }
 }
 
@@ -563,12 +640,6 @@ footer button:hover {
         width: 50%;
     }
 
-    .card-head img {
-        width: 100%; 
-        height: 100%;
-        object-fit: cover;
-    }
-
     .card-text {
         display: flex;
         flex-direction: column;
@@ -596,15 +667,12 @@ footer button:hover {
         margin: 10px 30px;
     }
 
-    .trio-box {
-        width: 90%;
-        align-self: center;
-        display: flex;
-        justify-content: space-evenly;
+    .form.box {
+        width: 1200px; 
     }
 
-    .contact {
-        width: 1200px; 
+    .form__input { 
+        width: 600px; 
     }
 
 
@@ -626,10 +694,18 @@ footer button:hover {
     .text-box p {
         font-size: 1.5em;
     }
+
+    .form-box {
+        width: 1000px; 
+    }
 }
 
 @media (min-width: 1500px) {
     .about-me {
         width: 1200px; 
+    }
+
+    .project__container {
+        width: 1400px;
     }
 }

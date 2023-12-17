@@ -6,10 +6,11 @@
     <title>PORTFOLIO</title>
     <link rel="stylesheet" href="/css/styles.css" />
     <script src="/js/menu.js" defer></script>
+    <script src="/js/contact.js" defer></script>
   </head>
   <body>
     <header>
-      <a href="/index.html" class="logo">KONST</a>
+      <a href="/index.html" class="logo toosmall">KONST</a>
 
       <div class="hamburger-menu">
         <button class="hamburger-icon">
@@ -157,7 +158,7 @@
         <h2>CONTACT</h2>
         <form class="form-box">
           <fieldset>
-            <legend>CONTACT</legend>
+            <legend>GET IN TOUCH</legend>
             <label for="name">Name:</label>
             <input type="text" name="name" id="name" class="form__input" />
             <div id="nameError" class="error-message"></div>
@@ -174,7 +175,6 @@
               class="form__input"
             />
             <div id="subjectError" class="error-message"></div>
-
             <label for="message">Your message:</label>
             <input
               class="message-box form__input"
@@ -188,12 +188,17 @@
         </form>
       </div>
     </div>
+    <div class="modal" id="successModal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Form submitted successfully!</h3>
+      </div>
+    </div>
 
       </section>
     </main>
     <footer>
-      <!--<button>CONTACT</button>-->
-      <p>C: LILL-KRISTINE KONST 2023</p>
+      <p>COPYRIGHT © 2023 | LILL-KRISTINE KONST 2023</p>
     </footer>
   </body>
 </html>
