@@ -27,6 +27,7 @@ header {
     background-color: #C1BAB3;
     margin: 0px;
     padding: 10px;
+    height: 70px; 
 }
 
 .logo {
@@ -34,7 +35,7 @@ header {
     text-decoration: none;
     color: #000000;
     font-size: 1.8em;
-    padding: 15px; 
+    padding: 20px; 
     z-index: 999;
 }
 
@@ -372,9 +373,19 @@ footer button:hover {
 
 @media (max-width: 500px) {
 
+
+    .about {
+        margin-top: 20px; 
+    }
+
+    .contact {
+        margin-top: 0px;
+    }
+
+
     .main-img {
         height: 250px; 
-        width: 100%;
+        width: 90%;
     }
 
     .btn__container {
