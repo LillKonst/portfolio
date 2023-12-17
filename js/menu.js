@@ -1,7 +1,7 @@
 document.querySelector(".hamburger-menu").addEventListener("click", () => {
     const menu = document.querySelector(".menu");
     menu.classList.toggle("active");
-    positionMenu(); // Trigger position update on menu toggle
+    positionMenu();
   });
   
   window.addEventListener('scroll', () => {
@@ -9,7 +9,7 @@ document.querySelector(".hamburger-menu").addEventListener("click", () => {
     
     if (window.scrollY > 0) {
       header.classList.add("sticky");
-      positionMenu(); // Update menu position on scroll
+      positionMenu();
     } else {
       header.classList.remove("sticky");
     }
@@ -20,7 +20,7 @@ document.querySelector(".hamburger-menu").addEventListener("click", () => {
   function toggleHeaderOnScroll() {
     const header = document.querySelector("header");
   
-    if (window.innerWidth > 1000) { // Adjust this width according to your desktop breakpoint
+    if (window.innerWidth > 1000) {
       if (window.scrollY > 0) {
         header.classList.add("fixed-header");
       } else {
@@ -37,7 +37,6 @@ document.querySelector(".hamburger-menu").addEventListener("click", () => {
     toggleHeaderOnScroll();
   });
   
-  // Initialize the behavior on page load
   toggleHeaderOnScroll();
   
 
@@ -55,7 +54,7 @@ document.querySelector(".hamburger-menu").addEventListener("click", () => {
             if (element) {
                 const elementPosition = element.getBoundingClientRect().top;
                 window.scrollTo({
-                    top: elementPosition + window.scrollY - 100, // Adjust the offset as needed (-20px in this example)
+                    top: elementPosition + window.scrollY - 100, 
                     behavior: "smooth"
                 });
             }
@@ -73,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (element) {
                 const elementPosition = element.getBoundingClientRect().top;
                 window.scrollTo({
-                    top: elementPosition + window.scrollY - 100, // Adjust the offset as needed (-20px in this example)
+                    top: elementPosition + window.scrollY - 100, 
                     behavior: "smooth"
                 });
             }
@@ -92,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (element) {
                 const elementPosition = element.getBoundingClientRect().top;
                 window.scrollTo({
-                    top: elementPosition + window.scrollY - 100, // Adjust the offset as needed (-20px in this example)
+                    top: elementPosition + window.scrollY - 100, 
                     behavior: "smooth"
                 });
             }

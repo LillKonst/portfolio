@@ -1,12 +1,13 @@
-html {
-    margin: 0; 
-    padding: 0; 
-    background-color: #E6DFD7;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
 }
 
 body {
-    margin: 0; 
-    padding: 0; 
+    background-color: #E6DFD7;
 }
 
 @font-face {
@@ -27,7 +28,7 @@ header {
     background-color: #C1BAB3;
     margin: 0px;
     padding: 10px;
-    height: 70px; 
+    height: 80px; 
 }
 
 .logo {
@@ -68,6 +69,7 @@ header {
     position: fixed;
     top: 12px;
     right: 12px; 
+    width:fit-content;
 }
 
 .hamburger-icon img {
@@ -474,7 +476,7 @@ footer p {
     header {
         flex-direction: row;
         position: relative;
-        height: 50px; 
+        height: 60px; 
         width: 100%; 
         margin: 0;
     }
@@ -487,14 +489,20 @@ footer p {
         margin: 0;
       }
 
+
+    .logo {
+        font-size: 2em;
+        padding: 12px; 
+    }
+
     .hamburger-icon {
         display: none;
     }
 
     .hamburger-menu {
         position: fixed;
-        top: 17px;
-        right: 50px; 
+        top: 8px;
+        right: 8px; 
     }
 
     .menu, .menu.active {
@@ -506,6 +514,9 @@ footer p {
         position: static;
         overflow: hidden;
         padding-top: 0px; 
+        position: fixed;
+        top: 8px;
+        right: 8px; 
 
     }
 
