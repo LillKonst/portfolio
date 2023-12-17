@@ -99,7 +99,6 @@ header {
 }
 
 .menu a {
-    text-align: left;
     font-family: "Hubballi";
     color: #000000;
     text-decoration: none;
@@ -414,7 +413,7 @@ footer p {
    width: fit-content;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 300px) {
 
     .toosmall {
         display: none;
@@ -671,15 +670,14 @@ footer p {
     }
 
     .card img {
-        width: 50%;
+        width: 40%;
     }
 
     .card-text {
         display: flex;
         flex-direction: column;
-        padding: 20px; 
         height: 250px;
-        width: 50%;
+        width: 60%;
     }
 
     .card-text h3 {
@@ -694,7 +692,7 @@ footer p {
     }
 
     .btn__container {
-        padding: 0; 
+        padding: 0px; 
     }
 
     a .btn{
