@@ -258,7 +258,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-self: center;
-    width: 90%;
+    width: 100%;
     height: fit-content;
     background-color: #C1BAB3;
     border-radius: 5px;
