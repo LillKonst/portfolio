@@ -45,19 +45,59 @@ document.querySelector(".hamburger-menu").addEventListener("click", () => {
 
 
 
-  
-  const portfolio = document.querySelector('.project__container');
-portfolio.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+  document.addEventListener("DOMContentLoaded", () => {
+    const portfolioButtons = document.querySelectorAll(".portfolio-btn");
+
+    portfolioButtons.forEach(button => {
+        button.addEventListener("click", (event) => {
+            event.preventDefault();
+            const element = document.getElementById("portfolio");
+            if (element) {
+                const elementPosition = element.getBoundingClientRect().top;
+                window.scrollTo({
+                    top: elementPosition + window.scrollY - 100, // Adjust the offset as needed (-20px in this example)
+                    behavior: "smooth"
+                });
+            }
+        });
     });
 });
 
-const aboutMe = document.querySelector('.about-me');
-aboutMe.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+document.addEventListener("DOMContentLoaded", () => {
+    const portfolioButtons = document.querySelectorAll(".about-btn");
+
+    portfolioButtons.forEach(button => {
+        button.addEventListener("click", (event) => {
+            event.preventDefault();
+            const element = document.getElementById("about");
+            if (element) {
+                const elementPosition = element.getBoundingClientRect().top;
+                window.scrollTo({
+                    top: elementPosition + window.scrollY - 100, // Adjust the offset as needed (-20px in this example)
+                    behavior: "smooth"
+                });
+            }
+        });
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const portfolioButtons = document.querySelectorAll(".contact-btn");
+
+    portfolioButtons.forEach(button => {
+        button.addEventListener("click", (event) => {
+            event.preventDefault();
+            const element = document.getElementById("contact");
+            if (element) {
+                const elementPosition = element.getBoundingClientRect().top;
+                window.scrollTo({
+                    top: elementPosition + window.scrollY - 100, // Adjust the offset as needed (-20px in this example)
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+});
+
+

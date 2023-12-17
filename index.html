@@ -16,9 +16,9 @@
           MENU <img src="/images/black-bars-2.svg" alt="bars for menu" />
         </button>
         <div class="menu">
-          <a href="#">PORTFOLIO</a>
-          <a href="#">ABOUT</a>
-          <a href="#">CONTACT</a>
+          <a class="portfolio-btn" href="#">PORTFOLIO</a>
+          <a class="about-btn" href="#">ABOUT</a>
+          <a class="contact-btn" href="#">CONTACT</a>
         </div>
       </div>
     </header>
@@ -28,8 +28,8 @@
         <p>A frontend development student based in Oslo, Norway</p>
       </div>
 
-      <section class="portfolio project__container">
-        <h2>RECENT PROJECTS</h2>
+      <section id="portfolio" class=" project__container">
+        <h2>PORTFOLIO</h2>
         <div class="card">
           <img
             src="/images/Skjermbilde 2023-12-15 101133.jpg"
@@ -123,8 +123,9 @@
           </div>
         </div>
       </section>
-
-      <section class="about-me about">
+<section id="about" class="about">
+  <h2>ABOUT</h2>
+      <div class="about-me">
         <div class="img__container">
           <img
             class="main-img"
@@ -151,13 +152,14 @@
           </p>
 
           <div class="btn__container desktop">
-            <button class="btn">MY PROJECTS</button>
-            <button class="btn">CONTACT ME</button>
+            <button class="btn portfolio-btn">MY PROJECTS</button>
+            <button class="btn contact-btn">CONTACT ME</button>
           </div>
-        </div>
+        </div></div>
       </section>
 
-      <section class="contact">
+      <section id="contact" class="contact">
+        <h2>CONTACT</h2>
         <form class="form-box">
           <fieldset>
             <legend>CONTACT</legend>
