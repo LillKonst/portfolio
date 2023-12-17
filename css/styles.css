@@ -154,6 +154,7 @@ h1 {
     margin: 10px; 
     padding: 10px; 
     text-align: center;
+    align-self: center;
 }
 
 .text-box p {
@@ -279,6 +280,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 90%; 
     align-self: center;
     background-color: #C1BAB3;
@@ -316,6 +318,10 @@ fieldset {
     border: none;
     display: flex;
     flex-direction: column;
+    padding: 20px; 
+    width: 100%; 
+    text-align: center;
+    align-items: center;
 }
 
 .form__input {
@@ -429,13 +435,39 @@ footer p {
         margin: 10px;
     }
 
+    .text-box {
+        margin: 0;
+        padding: 2px; 
+    }
+
+    .text-box h2 {
+        padding: 0px;
+        margin: 10px 2px;  
+    }
+
+    .text-box h2 {
+        font-size: 1.8em;
+    }
+
     .form__input {
-        width: 100px; 
+        width: 150px; 
     }
 }
 
 @media (max-width: 500px) {
 
+    .text-box {
+        margin: 0; 
+    }
+
+    .text-box h2 {
+        font-size: 1.8em;
+        margin-bottom: 5px; 
+    }
+
+    .text-box h3 {
+        margin-bottom: 10px; 
+    }
 
     .about {
         margin-top: 20px; 
@@ -517,6 +549,7 @@ footer p {
         position: fixed;
         top: 8px;
         right: 8px; 
+        z-index: 999;
 
     }
 
