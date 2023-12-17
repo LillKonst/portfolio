@@ -81,7 +81,7 @@ header {
     top: 22px; 
     right: 20px; 
     border-radius: 10px 30px 10px 10px;
-    padding-top: 50px;
+    padding-top: 30px;
     background-color: rgba(193, 186, 179);
     z-index: 998;
 }
@@ -370,11 +370,20 @@ footer button:hover {
     font-weight: 600;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
 
     .main-img {
         height: 250px; 
         width: 100%;
+    }
+
+    .btn__container {
+        padding: 5px; 
+        margin: 20px 0px;
+    }
+
+    .btn {
+        font-size: 1.2em;
     }
 }
 
