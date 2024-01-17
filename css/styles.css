@@ -25,7 +25,7 @@ header {
     display: flex;
     justify-content: space-between;
     position: relative;
-    background-color: #C1BAB3;
+    background-color: #9A8D84;
     margin: 0px;
     padding: 10px;
     height: 80px; 
@@ -136,7 +136,7 @@ main {
     padding: 20px;
 }
 
-.welcome h2 {
+.welcome h1 {
     font-size: 3em;
 }
 
@@ -151,7 +151,7 @@ main {
     padding: 10px;
     width: 95%;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 100px;
     align-self: center;
 }
 
@@ -367,7 +367,9 @@ fieldset {
 }
 
 .message-box {
-    min-height: 150px;
+    min-height: 125px;
+    max-height: 200px;
+    max-width: 600px; 
 }
 
 .error-message {
@@ -487,6 +489,16 @@ footer p {
 }
 
 @media (max-width: 500px) {
+
+    
+.welcome h1 {
+    font-size: 2em;
+}
+
+.welcome p {
+    font-size: 1.5em;
+    padding-bottom: 20px; 
+}
 
     .text-box {
         margin: 0; 
