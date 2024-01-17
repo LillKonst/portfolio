@@ -441,6 +441,10 @@ footer p {
 
 @media (max-width: 300px) {
 
+    .menu.active {
+        width: 80%; 
+        }
+
     .toosmall {
         display: none;
     }
@@ -488,6 +492,10 @@ footer p {
     .welcome-img {
         height: 300px;
     }
+
+    .menu.active {
+        width: 55%; 
+        }
 }
 
 @media (max-width: 500px) {
